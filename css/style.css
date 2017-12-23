@@ -1,0 +1,7 @@
+body{
+	background: #ccc;
+}
+
+input#eventName.form-control, input#eventDate.form-control, input#eventTime.form-control{
+	width: 350px;
+}
