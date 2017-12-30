@@ -1,7 +1,715 @@
+
+
+html{
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+}
 body{
-	background: #ccc;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background: #edeff2;
+}
+#showcase{
+  background: url('../img/img2.jpeg');
+  background-color: #686867;
+  background-blend-mode: multiply;
+  background-position: center center;
+      background-repeat:  no-repeat;
+      background-attachment: fixed;
+      background-size:  cover;
+      height: 100vh;
+      margin-bottom: 10%;
+  
+}
+.navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+ul.nav{
+  width: 600px;
+}
+nav.navbar{
+	padding-top: 2%;
+}
+nav .nav-link{
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+a.nav-link:hover{
+  background-color: rgba(161, 226, 104, 0.4);
+  border-radius: 10px;
+}
+a.nav-link.active{
+  border-bottom: solid 2px rgb(161, 226, 104);
+}
+li.nav-item.brand{
+	margin-left: 2%;
+	margin-right: 2%;
+}
+a.navbar-brand{
+	text-decoration: none;
+	color: rgb(213, 149, 65);
+	font-size: 50px;
+	margin-right: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+  font-family: 'Great Vibes', cursive;
 }
 
-input#eventName.form-control, input#eventDate.form-control, input#eventTime.form-control{
-	width: 350px;
+/* font-family: 'Great Vibes', cursive;
+font-family: 'Alex Brush', cursive;
+font-family: 'Allura', cursive;
+font-family: 'Arizonia', cursive;
+*/
+
+form.search{
+  display: none;
+  margin-bottom: 2%;
 }
+
+div.text-an{
+  margin-left: 30%;
+  padding-top: 20%;
+}
+
+
+span.title{
+  font-weight: bold;
+  font-size: 4vw;
+  color: #fff;
+}
+span.body{
+  font-size: 2vw;
+  color: #fff;
+  }
+div.an {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color: rgb(213, 149, 65);
+  font-weight: bold;
+  font-size: 50px;
+}
+
+div.an:first-of-type {    /* For increasing performance 
+                       ID/Class should've been used. 
+                       For a small demo 
+                       it's okaish for now */
+  animation: showup 7s infinite;
+}
+
+div.an:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+div.an:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+
+
+
+h1{
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  padding-top: 1%;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+
+section#about{
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+div.about-title h1{
+  text-align: center;
+  color: rgb(117, 113, 115);
+  font-size: 2em;
+
+}
+section#about hr{
+  background: rgb(213, 149, 65);
+  width: 100px;
+  margin-top: 1%;
+  margin-bottom: 100px;
+}
+div.about-body{
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 10%;
+}
+div.about-body p{
+  color: rgb(117, 113, 115);
+  font-weight: bold;
+  text-align: justify;
+  font-size: 1.2em;
+
+}
+div.about-body span{
+  color: rgb(213, 149, 65);
+}
+div.skills h1{
+  color: rgb(117, 113, 115);
+  font-size: 2em;
+}
+div.skills-icon{
+  font-size: 1.5em;
+  text-align: center;
+  color: rgb(213, 149, 65);
+}
+div.skills-title{
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 5%;
+  text-align: center;
+}
+i.fa.fa-mobile{
+  font-size: 1.7em;
+}
+div.skills-body{
+  color: rgb(117, 113, 115);
+  text-align: center;
+}
+
+section#work{
+  margin-top: 10%;
+  margin-bottom: 20%
+}
+section#work h1{
+  color: rgb(117, 113, 115);
+  font-size: 2em;
+
+}
+section#work hr{
+  background: rgb(213, 149, 65);
+ width: 100px;
+  margin-top: 1%;
+  margin-bottom: 100px;
+}
+
+div#cigal{
+  background: url('../img/cigal.png');
+  margin-left: 20%;
+  margin-bottom: 15%;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  width: 930px;
+  height: 480px;
+  transition: all 0.5s ease-out;
+}
+
+div#cigal.animate{
+  background-color: #353533;
+  background-blend-mode: multiply;
+}
+
+div#cigal p{
+  color: #e0e0e2;
+  padding-left: 5%;
+  text-shadow: 2px 2px #595857;
+}
+div#cigal p.no{
+  font-size: 10em;
+  font-family: roboto;
+  font-weight: bold;
+  display: inline-block;
+  position:relative;
+    top:-70px;
+    padding-left: 80%;
+}
+div.cigal-title{
+  display: none;
+}
+div#cigal p.title{
+  font-size: 3em;
+  font-weight: bold;
+ padding-top: 5%;
+}
+div#cigal p.body{
+  font-size: 1.4em;
+  }
+p.body button{
+  margin-left: 5%;
+  background: linear-gradient(to right, #d59541, #f2d596);
+  color: #fff;
+}
+div#nc{
+  background: url('../img/nc.png');
+  margin-left: 20%;
+  margin-bottom: 20%;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  width: 930px;
+  height: 480px;
+  transition: all 0.5s ease-out;
+}
+div#nc.animate{
+  background-color: #353533;
+  background-blend-mode: multiply;
+}
+div#nc p{
+  color: #e0e0e2;
+  padding-left: 5%;
+  text-shadow: 2px 2px #595857;
+}
+div#nc p.no{
+  font-size: 10em;
+  font-family: roboto;
+  font-weight: bold;
+  display: inline-block;
+  position:relative;
+    top:-70px;
+    padding-left: 80%;
+}
+div.nc-title{
+  display: none;
+}
+div#nc p.title{
+  font-size: 3em;
+  font-weight: bold;
+ padding-top: 5%;
+}
+div#nc p.body{
+  font-size: 1.4em;
+}
+section#contact{
+  margin-bottom: 20%;
+}
+section#contact h1{
+  color: rgb(117, 113, 115);
+  font-size: 2em;
+
+}
+section#contact hr{
+  background: rgb(213, 149, 65);
+ width: 100px;
+  margin-top: 1%;
+  margin-bottom: 100px;
+}
+section#contact div.message{
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  margin-left: 25%;
+  margin-bottom: 100px;
+  position: relative;
+
+}
+section#contact div.address{
+  width: 350px;
+  height: 400px;
+  background: rgb(213, 149, 65);
+  margin-top: -68%;
+  margin-left: -10%;
+  position: absolute;
+  filter: blur(0.5px) drop-shadow(2px 2px 2px #6f6f70);
+  color: #545556;
+
+  }
+div.address h1{
+  margin-top: 10%;
+}
+
+div.ad-body{
+  margin-top: 10%;
+  margin-left: 10%;
+}
+h2.social i{
+  margin-left: -10%;
+  margin-top: 10%;
+  color: #ccc;
+}
+div.message h2{
+  margin-left: 55%;
+  padding-bottom: 5%;
+   padding-top: 5%;
+  color: #545556;
+font-weight: bold;
+color: rgb(213, 149, 65);
+}
+div.msg-body{
+  width: 200px;
+  height: 400px;
+ margin-left: 55%;
+ color: #545556;
+font-weight: bold;
+}
+div.msg-body button{
+background-color: rgb(213, 149, 65);
+color: #fff;
+border-radius: 10px;
+margin-left: 5%;
+}  
+
+section#footer{
+  background-color: rgba(130, 128, 128, 0.2);
+  height: 120px;
+  color: #6d6d6d;
+}
+
+div.footer-nav{
+  padding-top: 3%;
+padding-left: 20%;
+}
+span.normal{
+  font-size: 20px;
+  margin-top: 3%;
+}
+span.brand{
+  font-size: 30px;
+  font-family: 'Great Vibes', cursive;
+}
+div.footer-med{
+  padding-top: 4%;
+  font-size: 5px;
+  font-weight: bold;
+}
+div.footer-ad{
+  padding-top: 2%;
+}
+div.footer-ad button{
+  border-radius: 20px;
+  color: #6d6d6d;
+}
+}
+
+
+@media (max-width: 1400px) {
+  
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 830px;
+  height: 380px;
+}
+div#cigal p.title{
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 830px;
+  height: 380px;
+}
+div#nc p.title{
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+
+@media (max-width: 1199px) {
+ 
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 630px;
+  height: 380px;
+}
+div#cigal p.title{
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 630px;
+  height: 380px;
+}
+div#nc p.title{
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+
+}
+@media (max-width: 991px) {
+  
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 500px;
+  height: 380px;
+}
+div#cigal p.title{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 500px;
+  height: 380px;
+}
+div#nc p.title{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: -10%;
+}
+section#contact div.message{
+  width: 650px;
+  height: 500px;
+  margin-left: 12%;
+}
+div.text-an{
+  margin-left: 30%;
+  padding-top: 30%;
+}
+
+}
+
+@media (max-width: 767px) {
+  
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 380px;
+  height: 280px;
+}
+div#cigal p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -30%;
+}
+div#cigal p.no{
+  font-size: 6em;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 380px;
+  height: 280px;
+}
+div#nc p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -30%;
+}
+div#nc p.no{
+  font-size: 6em;
+}
+section#contact div.message{
+  width: 500px;
+  height: 500px;
+  background: #fff;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  margin-left: 8%;
+  margin-bottom: 100px;
+  position: relative;
+
+}
+section#contact div.address{
+  width: 250px;
+  height: 400px;
+  background: rgb(213, 149, 65);
+  margin-top: -90%;
+  margin-left: -10%;
+  position: absolute;
+  filter: blur(0.5px) drop-shadow(2px 2px 2px #6f6f70);
+  color: #545556;
+  }
+  div.msg-body{
+  width: 150px;
+  height: 400px;
+ margin-left: 55%;
+ color: #545556;
+font-weight: bold;
+
+}
+
+@media (max-width: 575px) {
+
+section#work{
+  margin: 10%;
+}
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 300px;
+  height: 200px;
+}
+div#cigal p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -50%;
+}
+div#cigal p.no{
+  font-size: 4em;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 300px;
+  height: 200px;
+}
+div#nc p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -50%;
+}
+div#nc p.no{
+  font-size: 4em;
+}
+section#contact div.message{
+  width: 420px;
+  height: 500px;
+  background: #fff;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  margin-left: 5%;
+  margin-bottom: 100px;
+  position: relative;
+
+}
+section#contact div.address{
+  width: 230px;
+  height: 400px;
+  background: rgb(213, 149, 65);
+  margin-top: -105%;
+  margin-left: -10%;
+  position: absolute;
+  filter: blur(0.5px) drop-shadow(2px 2px 2px #6f6f70);
+  color: #545556;
+
+  }
+ div.text-an{
+  margin-left: 30%;
+  padding-top: 40%;
+}
+div.an {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color: rgb(213, 149, 65);
+  font-weight: bold;
+  font-size: 30px;
+}
+ul.nav{
+  width: 150px;
+}
+
+}
+@media (max-width: 475px) {
+ 
+
+section#work{
+  margin: 5%;
+}
+div#cigal{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 250px;
+  height: 150px;
+}
+div#cigal p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -50%;
+}
+div#cigal p.body{
+  font-size: 1em;
+  }
+div#cigal p.no{
+  font-size: 4em;
+}
+div#nc{
+  margin-left: 15%;
+  margin-bottom: 10%;
+  width: 250px;
+  height: 150px;
+}
+div#nc p.title{
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -40%;
+}
+div#nc p.body{
+  font-size: 1em;
+  }
+div#nc p.no{
+  font-size: 4em;
+}
+div.about-body p{
+  text-align: left;
+}
+div.about-body{
+  margin-left: 0.2%;
+  margin-right: 0.2%;
+}
+section#contact div.message{
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  filter: blur(0.5px) drop-shadow(10px 10px 10px #6f6f70);
+  margin-left: 5%;
+  margin-bottom: 100px;
+  position: relative;
+
+}
+section#contact div.address{
+  width: 230px;
+  height: 400px;
+  background: rgb(213, 149, 65);
+  margin-top: -5%;
+  margin-left: 10%;
+  position: absolute;
+  filter: blur(0.5px) drop-shadow(2px 2px 2px #6f6f70);
+  color: #545556;
+  }
+  div.msg-body{
+  width: 150px;
+  height: 400px;
+ margin-left: 20%;
+ color: #545556;
+font-weight: bold;
+}
+div.message h2{
+ margin-left: 20%;
+}
+div.text-an{
+  margin-left: 10%;
+  padding-top: 50%;
+}
+div.an {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  color: rgb(213, 149, 65);
+  font-weight: bold;
+  font-size: 30px;
+}
+}
+
+
+
